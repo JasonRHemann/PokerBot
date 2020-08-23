@@ -1,0 +1,2 @@
+# PokerBot
+Automated poker player
