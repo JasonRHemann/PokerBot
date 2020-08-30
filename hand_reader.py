@@ -1,17 +1,27 @@
 import pyautogui
 import time
+import threading
+
 
 player_card_one = ["Not Found", "Not Found"]
 player_card_two = ["Not Found", "Not Found"]
 
-# Card Location for 6 handed game
-card_location = (300, 420, 100, 75)
+# Card Location for 6 handed game APP
+# card_location = (300, 420, 100, 75)
+
+# Card Location for 6 handed game WEB
+card_location = (300, 505, 80, 43)
+
+# Card Location for 9 handed game WEB
+#card_location = (300, 505, 80, 43)
 
 
 def hand_reader():
 
+    # threading.Timer(10.0, hand_reader).start()
+
     coordinates = pyautogui.locateAllOnScreen(
-        'club.png', confidence=.9, region=card_location)
+        'images/club.png', confidence=.9, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[1] = "of Clubs"
@@ -19,7 +29,7 @@ def hand_reader():
             player_card_two[1] = "of Clubs"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'spade.png', confidence=.9, region=card_location)
+        'images/spade.png', confidence=.9, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[1] = "of Spades"
@@ -27,7 +37,7 @@ def hand_reader():
             player_card_two[1] = "of Spades"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'diamond.png', confidence=.9, region=card_location)
+        'images/diamond.png', confidence=.9, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[1] = "of Diamonds"
@@ -35,7 +45,7 @@ def hand_reader():
             player_card_two[1] = "of Diamonds"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'heart.png', confidence=.9, region=card_location)
+        'images/heart.png', confidence=.9, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[1] = "of Hearts"
@@ -43,7 +53,7 @@ def hand_reader():
             player_card_two[1] = "of Hearts"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'two.png', confidence=.9, grayscale=True, region=card_location)
+        'images/two.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Two"
@@ -51,7 +61,7 @@ def hand_reader():
             player_card_two[0] = "Two"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'three.png', confidence=.9, grayscale=True, region=card_location)
+        'images/three.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Three"
@@ -59,7 +69,7 @@ def hand_reader():
             player_card_two[0] = "Three"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'four.png', confidence=.9, grayscale=True, region=card_location)
+        'images/four.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Four"
@@ -67,7 +77,7 @@ def hand_reader():
             player_card_two[0] = "Four"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'five.png', confidence=.9, grayscale=True, region=card_location)
+        'images/five.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Five"
@@ -75,7 +85,7 @@ def hand_reader():
             player_card_two[0] = "Five"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'six.png', confidence=.9, grayscale=True, region=card_location)
+        'images/six.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Six"
@@ -83,7 +93,7 @@ def hand_reader():
             player_card_two[0] = "Six"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'seven.png', confidence=.9, grayscale=True, region=card_location)
+        'images/seven.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Seven"
@@ -91,7 +101,7 @@ def hand_reader():
             player_card_two[0] = "Seven"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'eight.png', confidence=.9, grayscale=True, region=card_location)
+        'images/eight.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Eight"
@@ -99,7 +109,7 @@ def hand_reader():
             player_card_two[0] = "Eight"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'nine.png', confidence=.9, grayscale=True, region=card_location)
+        'images/nine.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Nine"
@@ -107,7 +117,7 @@ def hand_reader():
             player_card_two[0] = "Nine"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'ten.png', confidence=.9, grayscale=True, region=card_location)
+        'images/ten.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Ten"
@@ -115,7 +125,7 @@ def hand_reader():
             player_card_two[0] = "Ten"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'jack.png', confidence=.9, grayscale=True, region=card_location)
+        'images/jack.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Jack"
@@ -123,7 +133,7 @@ def hand_reader():
             player_card_two[0] = "Jack"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'queen.png', confidence=.9, grayscale=True, region=card_location)
+        'images/queen.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Queen"
@@ -131,7 +141,7 @@ def hand_reader():
             player_card_two[0] = "Queen"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'king.png', confidence=.9, grayscale=True, region=card_location)
+        'images/king.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "King"
@@ -139,7 +149,7 @@ def hand_reader():
             player_card_two[0] = "King"
 
     coordinates = pyautogui.locateAllOnScreen(
-        'ace.png', confidence=.9, grayscale=True, region=card_location)
+        'images/ace.png', confidence=.9, grayscale=True, region=card_location)
     for element in coordinates:
         if(element != None and element[0] < 340):
             player_card_one[0] = "Ace"
