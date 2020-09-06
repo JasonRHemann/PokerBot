@@ -12,8 +12,17 @@ import time
 #                           str(int(time.time())) + '3.png', region=(306, 433, 65, 43))
 
 # Full Screen Image
+# im = pyautogui.screenshot(
+#     r"/Users/EvolveD/Desktop/PokerBot/" + str(int(time.time())) + '4.png')
+
+
+# Full screen laptop
 im = pyautogui.screenshot(
-    r"/Users/EvolveD/Desktop/PokerBot/" + str(int(time.time())) + '4.png')
+    r"/home/evolved/Desktop/PokerBot/" + str(int(time.time())) + '4.png')
+
+# Hand location for laptop
+im = pyautogui.screenshot(
+    r"/home/evolved/Desktop/PokerBot/" + str(int(time.time())) + '5.png', region=(360, 545, 70, 50))
 
 #  Pot Image
 # im = pyautogui.screenshot(r"/Users/EvolveD/Desktop/PokerBot/" +
